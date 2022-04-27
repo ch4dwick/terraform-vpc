@@ -4,9 +4,10 @@
 
 These files are based off the "Create VPC with subnets" option with two AZs, two public and two private subnets, one NAT gateway, and a VPCE S3 Gateway.
 
-The following resources are created by these scripts:
+The following resources are created by these scripts (terraform state list):
 - aws_egress_only_internet_gateway.terraform-vpc-egw
 - aws_eip.terraform-nat-public1-ap-southeast-1a-eip
+- aws_instance.terraform-ec2-private-test
 - aws_instance.terraform-ec2-public-test
 - aws_internet_gateway.terraform-vpc-igw
 - aws_nat_gateway.terraform-nat-public1-ap-southeast-1a
