@@ -4,11 +4,9 @@
 
 These files are based off the "Create VPC with subnets" option with two AZs, two public and two private subnets, one NAT gateway, and a VPCE S3 Gateway.
 
-The following resources are created by these scripts (terraform state list):
+### The following resources are created by these scripts (terraform state list):
 - aws_egress_only_internet_gateway.terraform-vpc-egw
 - aws_eip.terraform-nat-public1-ap-southeast-1a-eip
-- aws_instance.terraform-ec2-private-test
-- aws_instance.terraform-ec2-public-test
 - aws_internet_gateway.terraform-vpc-igw
 - aws_nat_gateway.terraform-nat-public1-ap-southeast-1a
 - aws_route_table.terraform-vpc-rtb-private1-ap-southeast-1a
@@ -27,10 +25,24 @@ The following resources are created by these scripts (terraform state list):
 - aws_vpc.terraform-vpc
 - aws_vpc_endpoint.s3
 
-### The following are created for SSM access as per documentation. You may skip this if you don't need it.
+### The following are created for SSM access to EC2 instances in the private subnet as per documentation. You may skip this if you don't need it.
+
 - aws_vpc_endpoint.ec2messages
 - aws_vpc_endpoint.ssm
 - aws_vpc_endpoint.ssmmessages
+
+### The following are completely optional resources
+
+- aws_instance.terraform-ec2-private-test
+- aws_instance.terraform-ec2-public-test
+- aws_ec2_client_vpn_endpoint.terraform-ec2-client-vpn
+- aws_ec2_client_vpn_network_association.terraform-ec2-vpne-subnet-assoc1
+- aws_ec2_client_vpn_network_association.terraform-ec2-vpne-subnet-assoc2
+- aws_ec2_client_vpn_route.subnet1-web-route
+- aws_ec2_client_vpn_route.subnet2-web-route
+- aws_ec2_client_vpn_authorization_rule.terraform-vpn-auth-rule-subnet1
+- aws_ec2_client_vpn_authorization_rule.terraform-vpn-auth-rule-subnet2
+- aws_ec2_client_vpn_authorization_rule.terraform-vpn-auth-rule-internet
 
 ## Disclaimer:
 
