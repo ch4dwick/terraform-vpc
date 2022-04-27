@@ -2,7 +2,7 @@
 
 # Introduction
 
-These files are based off the "Create VPC with subnets" option with two AZs, two public and two private subnets, one NAT gateway, and a VPCE S3 Gateway.
+These files are based off the "Create VPC with subnets" option with two AZs, two public and two private subnets, one NAT gateway, VPN Client Endpoint with authorization to private subnets and internet pass-through, and a VPCE S3 Gateway.
 
 ### The following resources are created by these scripts (terraform state list):
 - aws_egress_only_internet_gateway.terraform-vpc-egw
