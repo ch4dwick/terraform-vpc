@@ -34,6 +34,7 @@ resource "aws_ec2_client_vpn_network_association" "terraform-ec2-vpne-subnet-ass
   # VPN Assets take time to tear down. Increase timeout.
   timeouts {
     delete = "10m"
+    create = "10m"
   }
 }
 
@@ -45,6 +46,7 @@ resource "aws_ec2_client_vpn_network_association" "terraform-ec2-vpne-subnet-ass
   # VPN Assets take time to tear down. Increase timeout.
   timeouts {
     delete = "10m"
+    create = "10m"
   }
 }
 
@@ -57,6 +59,7 @@ resource "aws_ec2_client_vpn_route" "subnet1-web-route" {
   # VPN Assets take time to tear down. Increase timeout.
   timeouts {
     delete = "10m"
+    create = "10m"
   }
 }
 
@@ -69,6 +72,7 @@ resource "aws_ec2_client_vpn_route" "subnet2-web-route" {
   # VPN Assets take time to tear down. Increase timeout.
   timeouts {
     delete = "10m"
+    create = "10m"
   }
 }
 
