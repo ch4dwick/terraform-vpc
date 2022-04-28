@@ -44,6 +44,23 @@ These files are based off the "Create VPC with subnets" option with two AZs, two
 - aws_ec2_client_vpn_authorization_rule.terraform-vpn-auth-rule-subnet2
 - aws_ec2_client_vpn_authorization_rule.terraform-vpn-auth-rule-internet
 
+# How to use
+
+## Initialize
+
+> terraform init
+
+After cherry-picking or tweaking the files to your needs:
+
+## Validate
+
+> terraform validate
+
+## Apply Plan
+
+> terraform apply
+
+
 ## Disclaimer:
 
 This is a work in progress. I am by no means an expert on networking or on AWS. All of the configuration defined here are best-guess or defaults. I take no responsibility for any incurred costs resulting from the AWS resources created by these files. 
