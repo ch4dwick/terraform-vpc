@@ -1,0 +1,15 @@
+name: Tagged Commit
+
+on:
+  push:
+    tags:
+      - "my-custom-tag-**"
+
+jobs:
+  deployment:
+    name: Applying plan
+    uses: ./.github/workflows/tf-apply.yaml
+    secrets: inherit
+    with:
+      # 'main' environment should contain AWS Secrets
+      environment: product-prod

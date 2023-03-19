@@ -1,0 +1,16 @@
+name: PR Closed
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  deployment:
+    if: github.event.pull_request.merged == 'true'
+    name: Validating script changes
+    uses: ./.github/workflows/tf-plan.yaml
+    secrets: inherit
+    with:
+      # 'main' environment should contain AWS Secrets
+      environment: main
