@@ -25,7 +25,7 @@ resource "aws_eip" "terraform-nat-public-ap-southeast-1a-eip" {
 resource "aws_nat_gateway" "terraform-nat-public-ap-southeast-1a" {
   connectivity_type = "public"
   allocation_id     = aws_eip.terraform-nat-public-ap-southeast-1a-eip.id
-  subnet_id         = aws_subnet.terraform-vpc-subnet-public-ap-southeast-1a.id
+  subnet_id         = aws_subnet.terraform-vpc-subnet-public-ap-southeast-1[0].id
 
   tags = {
     Name = "terraform-nat-ap-southeast-1a"
