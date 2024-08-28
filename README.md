@@ -4,6 +4,8 @@
 
 These files are based off the "Create VPC with subnets" option with two AZs, two public and two private subnets, one NAT gateway, VPN Client Endpoint with authorization to private subnets and internet pass-through, and a VPCE S3 Gateway.
 
+There is an optional nlb.tf script that lets you route your traffic to a private subnet from an Network Load Balancer.
+
 # How to use
 
 ## Initialize
