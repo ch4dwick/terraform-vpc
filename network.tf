@@ -33,5 +33,5 @@ resource "aws_nat_gateway" "terraform-nat-public-ap-southeast-1a" {
 
   # To ensure proper ordering, it is recommended to add an explicit dependency
   # on the Internet Gateway for the VPC.
-  depends_on = [aws_internet_gateway.terraform-vpc-igw]
+  depends_on = [aws_egress_only_internet_gateway.terraform-vpc-egw]
 }
